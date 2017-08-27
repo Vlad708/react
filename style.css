@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;	
+}
+
+.contacts-list {
+	width: 200px;
+	margin: 20px auto;
+}
+
+.contacts-list > ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+.search-field {
+	width: 100%;
+	padding: 5px;
+	font-size: 14px;
+}
+
+.contact {
+	margin: 5px 0;
+	padding: 7px;
+	line-height: 30px;
+	font-size: 16px;
+	border-bottom: 1px solid #d1d1d1;
+}
+
+.phoneNumber {
+	float: right;
+}
