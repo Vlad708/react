@@ -11,22 +11,33 @@
 	<div id="content"></div>
 
 	<script type="text/babel">
-		
-		var HelloWorld = React.createClass({
-			render: function() {
-				return (
-					<h1> Hello {this.props.name} and {this.props.partners}</h1>
-				);
+
+		var h1 = React.createElement('h1', null , 'Hello world');
+
+		class HelloWorld extends React.Component {
+			render() {
+			    return React.createElement('h1', this.props, 'Hello ' + this.props.name)
 			}
-		});
+		}
 
 		ReactDOM.render(
-			<div>
-				<HelloWorld name='Ivan' partners="Martin"/>
-				<HelloWorld name='Alina' partners="Gena"/>
-				<HelloWorld name='Masha' partners="Mike"/>
-			</div>,			
-			document.getElementById("content")
+			React.createElement(
+			  'section',
+			  null,
+			  React.createElement(HelloWorld, {
+			      name: 'Maria',
+				  className: 'btn'
+			  }),
+			  React.createElement(HelloWorld, {
+			      name: 'Kristina',
+                  className: 'btn'
+			  }),
+			  React.createElement(HelloWorld, {
+			      name: 'Kamila',
+                  className: 'btn'
+			  })
+			),
+			document.getElementById('content')
 		);
 
 
